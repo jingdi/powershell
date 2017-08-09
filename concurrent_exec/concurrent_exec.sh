@@ -5,7 +5,7 @@ source /etc/profile
     author:  alex.lvxin
     date:    2017-08-09
     comment: This script is used for running some command concurrently You should use the shell as follows:
-    Example: sh concurrent_run_v4.sh startDate end_Date concurrent_num customer_command parameter1 parameter2 ... parameterN 
+    Example: sh concurrent_exec.sh startDate end_Date concurrent_num customer_command parameter1 parameter2 ... parameterN 
                      Begin_date: the begin date value of the partition,like : 2017-07-01 
                      end_date: the end date value of the partition,like : 2017-08-01 
                      concurrent_num: the number of concurrent processes, it is an integer number,like:1 or 8 or 16 ..."
@@ -26,7 +26,7 @@ current_number=$3
 if [ $# -lt 4 ] 
 then
      echo "[ERROR] Thera are not enough parameters,You should use this script as follows:
-Example: sh concurrent_run_v4.sh startDate end_Date concurrent_num customer_command parameter1 parameter2 ... parameterN 
+Example: sh concurrent_exec.sh startDate end_Date concurrent_num customer_command parameter1 parameter2 ... parameterN 
 Begin_date: the begin date value of the partition,like : 2017-07-01 
 end_date: the end date value of the partition,like : 2017-08-01 
 [NOTE] If the Begin_date is less than end_date,Then the script will run the customer_command serially.But If the Begin_date is greater than end_date,Then the script will run the customer_command in Reverse order.
