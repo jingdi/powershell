@@ -4,6 +4,16 @@
     author:  alex.lvxin
     date:    2017-08-29
 '
+para_num=1
+if [ $# -ne $para_num ]
+then
+     echo "[ERROR] The script only accept $para_num  parameter(s),but you provid $# parameter(s).You should use this script as follows:
+Example: sh ssh_public.sh ips_file
+ips_file: The file that contains all the target ips or hosts 
+"
+        exit 1;
+fi
+
 :'The file that contains all the target ips or hosts,one ip or host in one line of the file,as follow:
 192.168.1.1
 192.168.1.2
